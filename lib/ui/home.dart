@@ -30,7 +30,7 @@ class _HomeState extends State<Home> {
 
   List<String> cities = ['London']; // Default city list
 
-  final String apiKey = "fb6d79f1ed7fc67ec256b1d55bb37df6";
+  final String apiKey = "api_key";
   final String apiUrl = "https://api.openweathermap.org/data/2.5/weather";
 
   Future<void> fetchWeatherData(String cityName) async {
