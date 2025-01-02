@@ -5,6 +5,7 @@ import 'package:intl/intl.dart';
 import 'package:flutter/services.dart';
 import 'package:projects/models/constants.dart';
 import 'package:projects/ui/weather_info_item.dart';
+import 'package:projects/ui/welcome.dart';
 
 class Home extends StatefulWidget {
   final List<String> selectedCities;
@@ -328,6 +329,18 @@ class _HomeState extends State<Home> {
             ],
           ),
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: myConstants.secondaryColor,
+        child: const Icon(Icons.arrow_back),
+        onPressed: () {
+          Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(
+              builder: (context) => const Welcome(),
+            ),
+          );
+        },
       ),
     );
   }
